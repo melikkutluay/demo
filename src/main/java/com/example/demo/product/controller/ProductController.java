@@ -22,6 +22,7 @@ public class ProductController {
         return productRepository.findAll();
     }
 
+
     @GetMapping("product/{id}")
     Product one(@PathVariable Long id) {
         return productRepository.findById(id).orElseThrow(() -> new ProductNotFoundException(id));
